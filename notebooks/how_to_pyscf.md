@@ -23,9 +23,9 @@ mf.kernel()
 trexio_file = 'rhf.hdf5'
 to_trexio(mf, trexio_file)
 ```
-The ```to_trexio``` function saves various data, including the basis set, molecular specifications, and molecular orbitals, into the TREXIO file.
+The ```to_trexio``` function saves various data, including the basis set, molecule specifications, and molecular orbitals, into the TREXIO file.
 
-#i Storing Two-Electron Integrals
+## Storing Two-Electron Integrals
  
 If required, you can also register the two-electron integrals in AO basis using the following commands:
 
