@@ -100,9 +100,11 @@ It retrives the number of determinantm coefficient and determinant list in bitfi
 This data can then be analyzed or used in subsequent computations.
 
 ## Import PySCF wavefunction to QP2
-QP2 (https://github.com/QuantumPackage/qp2/tree/dev-stable) requires additional information to import the PySCF - TREXIO file. The state group is necessary, including the total number of states (including the ground state) and the ID. For the ground state (GS), the ID is 0. Therefore, these lines should be added if you plan to use the PySCF wavefunction in QP2:
+QP2 (https://github.com/QuantumPackage/qp2/tree/dev-stable) requires additional information to import the PySCF - TREXIO file. The state group is necessary, including the total number of states (including the ground state) and the ID. For the ground state (GS), the ID is 0. Therefore, these lines should be added in your PySCF script if you plan to use its wavefunction into QP2:
 
 ```python
+import trexio
+
 filename = 'data_for_qp2.hdf5'
 trexio_file = trexio.File(filename, mode='w', back_end=trexio.TREXIO_HDF5)
 #Index of the current state: 0 is the GS
