@@ -1,6 +1,6 @@
-# How to write Pyscf output into Trexio format
+# How to write PySCF output into TREXIO format
 
-This tutorial shows how to use Pyscf (https://pyscf.org/) to save computational results in TREXIO format. 
+This tutorial shows how to use PySCF (https://pyscf.org/) to save computational results in TREXIO format. 
 
 ## Importing TREXIO
 
@@ -53,7 +53,7 @@ mcscf.fcisolver = selected_ci_spin0_symm.SelectedCI(rhf)
 #Perform  CASCI calculation
 mcscf.kernel()
  
-#Save determinants into trexio
+#Save determinants into TREXIO
 trexio_file = 'my_det.hdf5'
 det_to_trexio(mcscf, norb, nelec, trexio_file)
 ```
