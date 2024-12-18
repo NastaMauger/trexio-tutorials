@@ -7,7 +7,7 @@ This tutorial shows how to use Pyscf (https://pyscf.org/) to save computational 
 Trexio is avialble throught the pyscf-forge repository (https://github.com/pyscf/pyscf-forge). After installing PySCF-FORGE, you can access the TREXIO library within PySCF using the following import statement:
 
 ```python
-import pyscf.tools import *
+from pyscf.tools import trexio
 ```
 
 ## How to register RHF results
@@ -99,7 +99,7 @@ It retrives the number of determinantm coefficient and determinant list in bitfi
 This data can then be analyzed or used in subsequent computations.
 
 ## Import PySCF wavefunction to QP2
-QP2 requires additional information to import the PySCF - TREXIO file. The state group is necessary, including the total number of states (including the ground state) and the ID. For the ground state (GS), the ID is 0. Therefore, these lines should be added if you plan to use the PySCF wavefunction in QP2:
+QP2 (https://github.com/QuantumPackage/qp2/tree/dev-stable) requires additional information to import the PySCF - TREXIO file. The state group is necessary, including the total number of states (including the ground state) and the ID. For the ground state (GS), the ID is 0. Therefore, these lines should be added if you plan to use the PySCF wavefunction in QP2:
 
 ```python
 filename = 'data_for_qp2.hdf5'
