@@ -97,3 +97,18 @@ num_det, coeff, det_list = read_det_trexio(trexio_file)
 ```
 It retrives the number of determinantm coefficient and determinant list in bitfield format
 This data can then be analyzed or used in subsequent computations.
+
+## Import PySCF wavefunction to QP2
+QP2 requires additional information to import the PySCF - TREXIO file. The state group is necessary, including the total number of states (including the ground state) and the ID. For the ground state (GS), the ID is 0. Therefore, these lines should be added if you plan to use the PySCF wavefunction in QP2:
+
+```python
+filename = 'data_for_qp2.hdf5'
+trexio_file = trexio.File(filename, mode='w', back_end=trexio.TREXIO_HDF5)
+#Index of the current state: 0 is the GS
+trexio_file.set_state(0)
+#Total number of states
+trexio.write_state_num(trexio_file,1) 
+
+trexio_file.close()
+```
+
