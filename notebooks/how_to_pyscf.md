@@ -4,7 +4,7 @@ This tutorial shows how to use PySCF (https://pyscf.org/) to save computational 
 
 ## Importing TREXIO
 
-Trexio is avialble throught the pyscf-forge repository (https://github.com/pyscf/pyscf-forge). After installing PySCF-FORGE, you can access the TREXIO library within PySCF using the following import statement:
+TREXIO is avialble throught the pyscf-forge repository (https://github.com/pyscf/pyscf-forge). After installing PySCF-FORGE, you can access the TREXIO library within PySCF using the following import statement:
 
 ```python
 from pyscf.tools import trexio
