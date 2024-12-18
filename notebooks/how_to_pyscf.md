@@ -12,7 +12,8 @@ from pyscf.tools import trexio
 
 ## How to register RHF results
 
-Once a molecule is defined, you can register the Restricted Hartree-Fock (RHF) results into TREXIO. In this tutorial, the HDF5 backend is used to store the results.
+Once a molecule is defined, you can register the Restricted Hartree-Fock (RHF) results into TREXIO. If needed, it is also possible to register UHF wavefunction.
+In this tutorial, the HDF5 backend is used to store the results.
 
 ```python
 # Perform RHF calculation
